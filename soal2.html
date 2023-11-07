@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soal 2</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: aliceblue;
+        }
+
+        .all {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        h1, p, input, button, h6 {
+            margin: 10px 0;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="all">
+      <h1>Menghitung Luas Segitiga</h1>
+      <p>Input Alas :</p>
+      <input type="number" id="inputalas" />
+      <p>Input Tinggi :</p>
+      <input type="number" id="inputtinggi" />
+      <button onclick="hitung()">Hitung</button>
+      <br />
+      <h6 id="hasil"></h6>
+      <form action="index.html">
+        <button type="submit">Kembali</button>
+      </form>
+    </div>
+
+    <script>
+      function hitung() {
+        var Alas = parseFloat(document.getElementById("inputalas").value);
+        var Tinggi = parseFloat(document.getElementById("inputtinggi").value);
+
+        var hasil = 0.5 * Alas * Tinggi;
+
+        document.getElementById("hasil").innerHTML = hasil;
+      }
+    </script>
+  </body>
+</html>

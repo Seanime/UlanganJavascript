@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soal 3</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: aliceblue;
+        }
+
+        .all {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px #000;
+        }
+
+        h1, p, input, button, h6 {
+            margin: 10px 0;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="all">
+      <h1>Sign In / Login</h1>
+      <p>Input Username :</p>
+      <input type="text" id="inputuser" />
+      <p>Input Password :</p>
+      <input type="password" id="inputpassword" />
+      <button onclick="clicklogin()">Login</button>
+      <br />
+      <h6 id="hasil"></h6>
+      <form action="index.html">
+        <button type="submit">Kembali</button>
+      </form>
+    </div>
+
+    <script>
+      function clicklogin() {
+        var usernameasli = "stematel";
+        var passwordasli = 2023;
+
+        var masukuser = document.getElementById("inputuser").value;
+        var masukpassword = document.getElementById("inputpassword").value;
+
+        var hasil = "";
+
+        if (masukuser == usernameasli && masukpassword == passwordasli) {
+          hasil = "Selamat, Anda Berhasil Login";
+        } else {
+          hasil = "maaf anda gagal login";
+        }
+        document.getElementById("hasil").innerHTML = hasil;
+      }
+    </script>
+  </body>
+</html>

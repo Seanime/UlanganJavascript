@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soal 1</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: aliceblue;
+      }
+
+      .all {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      h1,
+      p,
+      input,
+      button,
+      h6 {
+        margin: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="all">
+      <h1>Data score</h1>
+      <p>Input score :</p>
+      <input type="number" id="inputscore" />
+      <button onclick="hitungscore()">Hasil</button>
+      <br />
+      <h6 id="hasil"></h6>
+      <form action="index.html">
+        <button type="submit">Kembali</button>
+      </form>
+    </div>
+    <script>
+      function hitungscore() {
+        var score = parseFloat(document.getElementById("inputscore").value);
+
+        var hasil = "";
+
+        if (score >= 90) {
+          hasil = "Selamat, Anda mendapatkan nilai A";
+        } else if (score >= 80 && score <= 89) {
+          hasil = "Anda mendapatkan nilai B";
+        } else if (score >= 70 && score <= 79) {
+          hasil = "Anda mendapatkan nilai C";
+        } else if (score >= 60 && score <= 69) {
+          hasil = "Anda mendapatkan nilai D";
+        } else {
+          hasil = "Anda mendapatkan nilai E";
+        }
+        document.getElementById("hasil").innerHTML = hasil;
+      }
+    </script>
+  </body>
+</html>
